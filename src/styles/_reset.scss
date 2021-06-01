@@ -1,0 +1,26 @@
+@include fontFace($mainFont, 700, $mainFontFile, 'Bold');
+@include fontFace($mainFont, 500, $mainFontFile, 'Medium');
+@include fontFace($mainFont, 400, $mainFontFile, 'Regular');
+@include fontFace($mainFont, 300, $mainFontFile, 'Light');
+@include fontFace($mainFont, 100, $mainFontFile, 'Thin');
+
+* {
+	font-family: $mainFont, 'sans-serif';
+	line-height: 1.4;
+	font-size: 14px;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body {
+	line-height: 1.4;
+	font-size: 14px;
+	background: initial;
+}

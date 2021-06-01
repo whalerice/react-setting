@@ -1,0 +1,663 @@
+translate {
+	font-family: inherit;
+	font-size: inherit;
+}
+// cq-context,
+// *[cq-context] {
+// 	//height: calc(100% - 45px);
+// 	background-color: chocolate;
+// 	width: 100%;
+// 	height: 800px;
+// }
+
+// .chartarea{
+// 	background-color: blue;
+// }
+cq-context,
+*[cq-context] {
+	overflow: hidden;
+}
+
+.chart-box {
+	width: 800px;
+	height: 500px;
+	position: relative;
+	border: 1px solid #ccc;
+}
+
+.multi {
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+	> div {
+		width: 50%;
+		height: 100%;
+		position: relative;
+	}
+}
+
+.ciq-toggles {
+	margin: 0;
+	padding: 0;
+	float: initial;
+	cq-share-button {
+		background-color: #fff;
+		float: initial;
+		line-height: initial;
+		padding: 0;
+		color: red;
+	}
+}
+// cq-tradehistory {
+// 	cq-item {
+// 		&[col='amount'] {
+// 			color: cadetblue;
+// 		}
+// 	}
+// }
+
+cq-flag {
+	// display: inline-block;
+	// position: relative;
+	// height: 14px;
+	// width: 22px;
+	// background-image: url(/static/media/languages.5f181dc2.svg);
+	// background-repeat: no-repeat;
+	// margin-right: 6px;
+	// margin-top: 6px;
+	// margin-left: 4px;
+	// border: solid #ddd 1px;
+	// &[cq-lang='en'] {
+	// 	background-position: -55px -30px;
+	// }
+}
+
+html:not([ciq-last-interaction='touch']) {
+	cq-share-button:hover {
+		color: khaki;
+	}
+}
+
+.custom-title {
+	* {
+		font-size: inherit;
+	}
+	// background-color: rgba(127, 90, 90, 0.2);
+	padding: 0;
+
+	.stx-down {
+		cq-current-price {
+			color: blue;
+		}
+		.cu-icon {
+			transform: rotate(0);
+			color: blue;
+		}
+	}
+	.stx-up {
+		cq-current-price {
+			color: red;
+		}
+
+		.cu-icon {
+			transform: rotate(-180deg);
+			color: red;
+		}
+	}
+	cq-symbol {
+		font-size: 28px;
+	}
+	cq-chart-price {
+		font-size: 11px;
+	}
+}
+
+.custom-headup {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 10px;
+	> ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			* {
+				font-size: 11px;
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 1px;
+				height: 10px;
+				background-color: black;
+				margin: 0 10px;
+			}
+			&:last-child::after {
+				display: none;
+			}
+			.huLabel {
+				margin-right: 5px;
+			}
+			.huField {
+				color: blue;
+			}
+		}
+	}
+}
+
+.cq-hu-static {
+	font-family: inherit;
+	background-color: khaki;
+	padding-left: 0;
+	font-weight: inherit;
+
+	.cq-hu-static-list {
+		background-color: aqua;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		* {
+			font-size: 11px;
+		}
+		li {
+			display: table-row;
+			.hu-label {
+				display: table-cell;
+				padding-right: 10px;
+				padding-left: 20px;
+				&:first-of-type {
+					padding-left: 0;
+				}
+			}
+			.hu-field {
+				display: table-cell;
+			}
+		}
+	}
+}
+.cq-hu-dynamic {
+	> div {
+		display: flex;
+
+		.hu-col {
+			width: 50%;
+			padding: 5px 10px;
+			&-lt {
+				.volume-grouping-title {
+					font-size: 11px;
+				}
+			}
+			&-rt {
+				display: flex;
+				flex-flow: column;
+				justify-content: flex-end;
+				align-items: flex-end;
+				> div {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					color: #000;
+					font-size: 14px;
+					strong {
+						font-size: 11px;
+						color: #838383;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	cq-volume-visual {
+		background-color: lightcoral;
+	}
+}
+// .cq-comparison-new {
+// 	// display: none;
+// 	cq-comparison-add-label {
+// 		color: chocolate;
+// 	}
+// }
+
+.stx_chart_controls {
+	background-color: pink;
+	.chartSize {
+		transform: scale(1);
+	}
+}
+
+.ciq-chart-area {
+	bottom: 0;
+	padding: 0;
+	.ciq-chart {
+		box-shadow: none;
+	}
+}
+
+.chart-nav {
+	box-sizing: border-box;
+	width: 100%;
+	height: 45px;
+	background-color: #efefef;
+	border-bottom: 1px solid #ccc;
+	&::after {
+		content: '';
+		display: table;
+		width: 100%;
+		clear: both;
+	}
+	.ciq-nav-lt {
+		float: left;
+		background-color: yellow;
+		display: inline-flex;
+	}
+	.ciq-nav-rt {
+		background-color: yellowgreen;
+		float: right;
+	}
+}
+
+// .break-lg{}
+/* Tablet size */
+// .break-md{}
+
+/* Mobile size */
+.break-sm {
+	.cq-hu-static {
+		.cq-hu-static-list {
+			li {
+				.hu-label {
+					display: none;
+				}
+				.hu-field {
+					display: flex;
+					&:before {
+						float: initial;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.stx_xaxis {
+	/* x-axis date styles */
+	font-size: 10px;
+	font-family: $Jalnan;
+	// font-family: $mainFont;
+	//font-family: 'Courier New', Courier, monospace;
+	// font-family: Helvetica;
+	color: #666;
+}
+
+.stx_yaxis {
+	/* y-axis price styles */
+	font-size: 10px;
+	font-family: $mainFont;
+	// font-family: 'Roboto';
+	// font-family: Helvetica;
+	color: #333;
+}
+
+/* 차트 중앙선 */
+.stx_current_hr {
+	&_up {
+		background-color: red;
+		color: #fff;
+	}
+	&_down {
+		background-color: blue;
+		color: #fff;
+	}
+}
+
+/* Candle */
+.stx_candle {
+	&_down {
+		color: rgba(18, 97, 196, 1);
+		border-left-color: blue;
+	}
+	&_shadow_down {
+		color: blue;
+	}
+	&_up {
+		color: rgba(210, 79, 69, 1);
+		border-left-color: red;
+	}
+	&_shadow_up {
+		color: red;
+	}
+	&_shadow_even {
+		color: #333;
+	}
+}
+
+/* Line */
+.stx_line_chart {
+	color: #333;
+	width: 1px;
+	// border-top-style: dotted;
+}
+
+/* Bar */
+.stx_bar {
+	&_down {
+		color: blue;
+	}
+	&_up {
+		color: red;
+		// width: 2px;
+	}
+	&_even {
+		color: #333;
+	}
+}
+
+/* Hollow Candle, Volume Candle */
+.stx_hollow_candle {
+	&_down {
+		color: blue;
+	}
+	&_up {
+		color: red;
+	}
+	&_even {
+		color: #333;
+	}
+}
+
+/* Mountain */
+.stx_mountain_chart {
+	background-color: aqua;
+	color: rgba(255, 255, 255, 0.1);
+	border-top-color: blue;
+	width: 1px;
+}
+
+/* Baseline */
+.stx_baseline {
+	color: #333;
+	&_down {
+		color: blue;
+		width: 1px;
+	}
+	&_up {
+		color: red;
+		width: 1px;
+	}
+}
+/* Histogram */
+.stx_histogram {
+	&_down {
+		color: blue;
+		border-left-color: #000;
+	}
+	&_up {
+		color: red;
+		border-left-color: #000;
+	}
+	&_even {
+		color: #ccc;
+		color: #333;
+	}
+}
+
+/* 지표 - Volume Chart */
+.stx_volume {
+	&_down {
+		// color: blue;
+		border-color: brown;
+	}
+	&_up {
+		// color: red;
+		border-color: brown;
+	}
+}
+
+#DChart {
+	.cq-hu-static {
+		left: 280px;
+		background-color: transparent;
+		.cq-hu-static-list {
+			background-color: transparent;
+		}
+	}
+}
+
+#flexContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+#cryptoGroup1,
+#cryptoGroup2 {
+	float: left;
+	width: 15%;
+	height: 100%;
+	margin-right: 5px;
+}
+#cryptoGroup2 {
+	width: 25%;
+}
+#cryptoGroup2 .ciq-chart {
+	padding-top: 0 !important;
+	margin-bottom: 5px;
+}
+#mainChartGroup {
+	display: flex;
+	flex-direction: column;
+	display: grid; /* A better model, if browser supports. */
+	height: 100%;
+}
+#marketDepthBookmark {
+	display: none;
+}
+#orderBookContainer,
+#tradeHistoryContainer {
+	width: 100%;
+	height: 100%;
+}
+cq-orderbook,
+cq-tradehistory {
+	position: relative !important;
+}
+
+#orderBookContainer {
+	background-color: burlywood;
+	cq-orderbook cq-orderbook-table cq-item[cq-orderbook-header] {
+		color: green;
+	}
+
+	// 매수
+	cq-orderbook cq-orderbook-bids cq-item div[col='price'] {
+		color: red;
+	}
+	cq-orderbook cq-orderbook-bids cq-item div[col='size'] {
+		color: yellow;
+	}
+	cq-orderbook cq-orderbook-bids cq-item div[col='amount'] {
+		color: #533d3d;
+	}
+	cq-orderbook cq-orderbook-bids cq-item {
+		border-left-color: rgba(255, 98, 98, 0.5);
+	}
+
+	// 매도
+	cq-orderbook cq-orderbook-asks cq-item div[col='price'] {
+		color: blue;
+	}
+	cq-orderbook cq-orderbook-asks cq-item div[col='size'] {
+		color: yellowgreen;
+	}
+	cq-orderbook cq-orderbook-asks cq-item div[col='amount'] {
+		color: rgb(71, 71, 71);
+	}
+	cq-orderbook cq-orderbook-asks cq-item {
+		border-right-color: rgba(0, 132, 255, 0.5);
+	}
+}
+#tradeHistoryContainer {
+	background-color: chartreuse;
+	cq-tradehistory cq-item div[col='amount'] {
+		background-color: cadetblue;
+		color: chartreuse;
+	}
+	cq-tradehistory cq-item div[col='time'] {
+		background-color: cadetblue;
+		color: blueviolet;
+	}
+	cq-tradehistory cq-tradehistory-body cq-item[dir='up'] div[col='price'] {
+		color: red;
+	}
+	cq-tradehistory cq-tradehistory-body cq-item[dir='down'] div[col='price'] {
+		color: blue;
+	}
+	cq-tradehistory cq-tradehistory-body cq-item[dir=''] div[col='price'] {
+		color: #000;
+	}
+}
+
+/* Money Flow chart */
+div[pie-chart] {
+	height: 180px;
+	width: 100%;
+	text-align: center;
+	background-color: red;
+}
+div[pie-chart] > span {
+	display: block;
+}
+div[pie-chart] > div {
+	height: calc(100% - 19px);
+	width: 100%;
+}
+
+.pie {
+	fill: yellow;
+	tspan {
+		// pie chart text color
+		&.name {
+			fill: green;
+		}
+		&.value {
+			fill: yellow;
+		}
+	}
+}
+
+.stx_marketdepth_chart {
+	border-right-style: solid; /* Target dot pattern */
+	border-top-style: solid; /* Mountain peak pattern */
+	color: inherit; /* Mid-price color */
+	font: bold 28px Roboto, Helvetica, sans-serif; /* Mid-price font */
+	opacity: 0.5; /* Mountain shading opacity */
+	width: 3px; /* Mountain peak width */
+}
+// 매수
+.stx_marketdepth_chart.bid {
+	background-color: red; /* Base of mountain gradient */
+	border-left-color: red; /* Top of mountain gradient */
+	border-right-color: red; /* Color of crosshairs target dot */
+	border-right-width: 4px; /* Width of target dot */
+	border-top-right-radius: 3px; /* Radius of corner of target dot */
+	border-top-color: red; /* Peak of mountain */
+	border-bottom-color: transparent; /* Border of volume bars */
+	color: red; /* Fill of volume bars */
+}
+// 매도
+.stx_marketdepth_chart.ask {
+	background-color: blue; /* Base of mountain gradient */
+	border-left-color: blue; /* Top of mountain gradient */
+	border-right-color: blue; /* Color of crosshairs target dot */
+	border-right-width: 4px; /* Width of target dot */
+	border-top-right-radius: 0px; /* Radius of corner of target dot */
+	border-top-color: blue; /* Peak of mountain */
+	border-bottom-color: transparent; /* Border of volume bars */
+	color: blue; /* Fill of volume bars */
+}
+
+.chart {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	.chart-menu-bar {
+		width: 100%;
+		height: 45px;
+		background-color: aqua;
+	}
+
+	.chart-container {
+		position: relative;
+		width: 100%;
+		flex: auto;
+		//position: absolute;
+		//width: 100%;
+		//height: calc(100% - 45px);
+	}
+}
+
+.chart-grid-header {
+	.ciq-nav {
+		.ciq-dropdowns {
+			.ciq-grid {
+				cq-menu-dropdown {
+					right: auto;
+					left: initial;
+					width: auto;
+					z-index: 99;
+				}
+			}
+		}
+	}
+}
+
+.chart-grid {
+	width: 100%;
+	height: calc(100% - 45px);
+
+	.cq-instant-chart {
+		.ciq-nav {
+			display: none;
+		}
+		box-sizing: border-box;
+		float: left;
+		position: relative;
+		background-color: darkgoldenrod;
+		// padding: 4px;
+		> cq-context {
+			background-color: darkgray;
+			margin: 4px;
+			width: calc(100% - 8px);
+			height: calc(100% - 8px);
+		}
+		.ciq-chart-area {
+			top: 0;
+		}
+		&.active {
+			border: solid 4px #398dff;
+			> cq-context {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	// border: solid 5px #398dff;
+	// box-shadow: 0 0 3px 0 rgb(255 255 255 / 25%);
+	// margin: -2.5px;
+	&:after {
+		clear: both;
+		display: block;
+		width: 100%;
+	}
+}

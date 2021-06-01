@@ -1,0 +1,14 @@
+@mixin fontFace($family, $weight, $fontUrl, $thickness) {
+	@font-face {
+		font-family: $family;
+		font-weight: $weight;
+		src: url('#{$fontUrl}-#{$thickness}.woff2') format('woff2'), url('#{$fontUrl}-#{$thickness}.woff') format('woff'), url('#{$fontUrl}-#{$thickness}.ttf') format('truetype');
+	}
+}
+
+@font-face {
+	font-family: $Jalnan;
+	src: url('./fonts/Jalnan/JalnanOTF.woff') format('woff'), url('./fonts/Jalnan/Jalnan.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
